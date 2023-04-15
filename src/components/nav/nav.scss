@@ -1,0 +1,99 @@
+
+ .navbar {
+   background-color: transparent;
+   color: white;
+   z-index: 100;
+   transition: background-color 0.5s ease 0s;
+ }
+ 
+ 
+ .navbar {
+   
+    .navbar-brand {
+      color: black;
+         
+       &:hover {
+          color: #555;
+       } 
+    }
+    
+   .navbar-nav {
+     
+     > li {
+       
+       > a {
+         color: white;
+         margin: 10px 5px 5px 5px;
+         
+       }
+       > a:hover, > a:active, > a:focus {
+         color: #C57ED3;
+         border: 1px solid #C57ED3;
+       }
+       > a:visited {
+         color: #C57ED3;
+         text-decoration: none;
+       }
+ 
+     } //end li
+ 
+     > .active {
+ 
+       > a, > a:hover, > a:focus {
+         background-color: transparent;
+         color: #C57ED3;
+       }
+ 
+     }
+ 
+   } //end .navbar-nav
+ 
+   //Collapsed styles
+   .navbar-toggler {
+     border-color: black;
+ 
+       &:hover, &:focus {
+        background-color: #eee;
+       }
+   }
+     
+ } //end .navbar-default
+ 
+ 
+ 
+ /* Solid class attached on scroll past first section */
+ 
+ .navbar.solid {
+   background-color: black;
+   transition: background-color 0.5s ease 0s;
+   box-shadow: 0 0 4px grey;
+ 
+     .navbar-brand {
+       color: white;
+       transition: color 1s ease 0s;
+     }
+ 
+     .navbar-nav {
+ 
+        > li {
+ 
+           > a {
+             color: white;
+             transition: color 1s ease 0s;
+           }
+ 
+        } //end li
+ 
+     } //end .navbar-nav
+
+     //Collapsed styles
+   .navbar-toggler {
+    border-color: White;
+    filter: brightness(0) invert(1);
+
+      &:hover, &:focus {
+        filter: opacity(100%);
+      }
+  }
+ 
+ }

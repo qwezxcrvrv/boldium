@@ -1,0 +1,73 @@
+div.heading_div{
+   background: #fff;
+   background-size: cover;
+   height: 100vh;
+   width: auto;
+
+   .mainContainer {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      width: 70vw;
+      color: black;
+      
+
+      h1.heading {            
+         text-align: left;            
+         font: 700 3.5rem/4rem Ubuntu,sans-serif;
+         text-transform: uppercase;
+      }
+
+      h3.heading {
+         color: black;
+         text-align: left;
+         font: 700 1rem/1.5rem Ubuntu,sans-serif;
+         text-transform: uppercase;
+      }
+
+      p {
+         text-align: left;
+         font-size: 1.2rem;
+         
+         .btn {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 1.2em;
+               
+            &:hover {
+               color: #ccc;
+               border-color: #ccc;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 768px){
+   div.heading_div{
+      .mainContainer {
+         transform: translate(-65%,-50%)!important;
+      
+         h1.heading {
+            font: 700 4.25rem/4.5rem Ubuntu,sans-serif;
+            text-transform: uppercase;
+            text-align: left;
+         }
+
+         h3.heading {
+            text-align: left;
+            font: 700 1.5rem/2rem Ubuntu,sans-serif;
+         }
+
+         p.heading-paragraph {
+            font-size: 2rem;
+            text-align: left;
+            padding:0;
+         }
+      }
+   }
+}
