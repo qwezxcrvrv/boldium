@@ -2,7 +2,6 @@
  .navbar {
    background-color: transparent;
    color: white;
-   z-index: 100;
    transition: background-color 0.5s ease 0s;
  }
  
@@ -26,25 +25,9 @@
          margin: 10px 5px 5px 5px;
          
        }
-       > a:hover, > a:active, > a:focus {
-         color: #C57ED3;
-         border: 1px solid #C57ED3;
-       }
-       > a:visited {
-         color: #C57ED3;
-         text-decoration: none;
-       }
  
      } //end li
  
-     > .active {
- 
-       > a, > a:hover, > a:focus {
-         background-color: transparent;
-         color: #C57ED3;
-       }
- 
-     }
  
    } //end .navbar-nav
  
@@ -73,17 +56,11 @@
        transition: color 1s ease 0s;
      }
  
-     .navbar-nav {
- 
-        > li {
- 
-           > a {
-             color: white;
-             transition: color 1s ease 0s;
-           }
- 
-        } //end li
- 
+     .navbar-collapse  {
+        a.nav-link {
+          color: white;
+          transition: color 1s ease 0s;
+        }
      } //end .navbar-nav
 
      //Collapsed styles

@@ -1,5 +1,6 @@
 import './home.scss';
 import EmailForm from '../../components/emailForm/emailForm';
+import Testimonials from '../../components/testimonials/testimonials';
 
 function Home() {
     return (
@@ -8,9 +9,10 @@ function Home() {
           <div className="mainContainer">
             <h1 className="heading">Boldium</h1>
             <h3 className="heading"> Architecture</h3>
-            <p class="heading-paragraph">Non officia anim quis et irure excepteur aliqua ipsum adipisicing anim enim qui. Veniam aliquip eu nostrud adipisicing exercitation in. Cillum mollit aute ex culpa commodo laborum minim dolore occaecat eiusmod ut exercitation nisi do. Tempor qui officia laboris excepteur aliquip ut culpa anim ipsum labore minim qui.</p>
+            <p className="heading-paragraph">Spending time thinking about space, its feelings, and its joy is something we value.</p>
           </div>
         </div>
+        <Testimonials />
         <EmailForm />
       </div>
     );

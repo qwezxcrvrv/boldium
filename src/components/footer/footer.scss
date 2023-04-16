@@ -5,25 +5,61 @@
 	min-height: 120px;
 	padding: 0;
 	width: 100%;
+
+	.company_info{
+		display: flex;
+
+		.license{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.LBP{
+		content: url(../../../public/images/LBP-Logo-Transparent.png);
+		-webkit-filter: invert(1);
+   		filter: invert(1);
+		display: block;
+		height: 6rem;
+		padding: 0;
+		width: 6rem;
+	}
+
+	.hr_white{
+		color:white;
+		opacity: 0.75;
+	}
+
+	.footer_contact{
+		color:white;
+	}
 }
-#footer div {
+#footer>div {
 	margin: 0 auto;
 	max-width: 940px;
 	overflow: hidden;
 	padding: 4rem 1rem;
 }
 #footer div p {
-	color: #FFFFFF;
-	float: left;
+	color: #FFFFFF;	
 	font-family: Arial;
 	font-size: 15px;
-	font-weight: normal;
-	line-height: 15px;
-	margin: 0;
+	font-weight: normal;		
 	padding: 5px 0 0;
 	text-align: left;
 	text-transform: none;
 	width: 400px;
+
+	.copyright{
+		float: right;
+		margin: 0;
+		line-height: 15px;
+	}
+
+	.lep_paragraph{
+		float: left;
+		line-height: 1rem;
+	}
 }
 #footer div .connect {
 	display: block;
@@ -77,26 +113,36 @@
         flex-direction:column;
         justify-content:space-between;
 
-        .connect {
-            display: flex;
-            float:none;
-            align-self:center;
-            margin-bottom: 1rem;
-        }
+		.company_info{
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
 
-        p {
-            color: #FFFFFF;
-            float: none;
-            font-family: Arial;
-            font-size: 15px;
-            font-weight: normal;
-            line-height: 15px;
-            margin: 0;
-            padding: 5px 0 0;
-            text-align: left;
-            text-transform: none;
-            width: auto;
-            align-self:center;
-        }
+			.license{
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1rem;
+				
+				.LBP{
+					margin:0 auto;
+				}
+				.lep_paragraph{
+					margin-top:1rem;
+					width: 70vw;
+				}
+
+			}
+
+			.connect {
+				display: flex;
+				float:none;
+				align-self:center;
+				margin-bottom: 1rem;
+			}
+		}
+
+        
+
+
     }
 }
