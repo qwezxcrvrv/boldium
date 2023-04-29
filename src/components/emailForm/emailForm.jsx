@@ -18,7 +18,7 @@ function EmailForm() {
     };
 
     return (        
-        <Container className="emailForm">
+        <Container className="emailForm pt_lg pb_lg">
             <p className="header">Get In Touch</p>
             <p className="paragraph">In most cases, we can provide a quote remotely without a site visit if you have council property files. Contact us for a free quote.</p>
             <Form className="emailForm_form" ref={form} onSubmit={sendEmail}>

@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+
+  h2{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+  }
+  .pt_lg{
+    padding-top: 8rem;
+  }
+  .pb_lg{
+    padding-bottom: 8rem;
+  }
+  .pt_md{
+    padding-top: 4rem;
+  }
+  .pb_md{
+    padding-bottom: 4rem;
+  }
+  .mt_lg{
+    margin-top: 8rem;
+  }
+  .mb_lg{
+    margin-bottom: 8rem;
+  }
+  .mt_md{
+    margin-top: 4rem;
+  }
+  .mb_md{
+    margin-bottom: 4rem;
+  }
+
+  .hidden{
+    display:none;
+  }
+}
+
+.margin_left_small{
+  margin-left:1rem;   
+}

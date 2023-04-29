@@ -12,6 +12,16 @@ div.heading_div{
       transform: translate(-50%,-50%);
       width: 70vw;
       color: black;
+
+      img#header_brand_img{
+         content: url("../../../public/images/Logos/Boldium_HQCrop.png");
+         height: auto; 
+         width: auto; 
+         // max-width: 200px; 
+         max-height: 100px;
+         margin-bottom: 2rem;
+         text-align: center;
+      }
       
 
       h1.heading {            
@@ -50,7 +60,11 @@ div.heading_div{
 @media (min-width: 768px){
    div.heading_div{
       .mainContainer {
-         transform: translate(-65%,-50%)!important;
+         transform: translate(-50%,-50%)!important;
+
+         img#header_brand_img{
+            max-height: 300px;
+         }
       
          h1.heading {
             font: 700 4.25rem/4.5rem Ubuntu,sans-serif;
