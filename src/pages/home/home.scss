@@ -2,7 +2,7 @@ div.heading_div{
    background: #fff;
    background-size: cover;
    height: 100vh;
-   width: auto;
+   width: auto;   
 
    .mainContainer {
       left: 50%;
@@ -10,77 +10,91 @@ div.heading_div{
       top: 50%;
       -webkit-transform: translate(-50%,-50%);
       transform: translate(-50%,-50%);
-      width: 70vw;
+      width: 80vw;
       color: black;
+      text-align: left;
 
       img#header_brand_img{
-         content: url("../../../public/images/Logos/Boldium_HQCrop.png");
-         height: auto; 
+         content: url("../../../public/images/Logos/LogoThinFitLarge.jpg");
          width: auto; 
          // max-width: 200px; 
-         max-height: 100px;
-         margin-bottom: 2rem;
-         text-align: center;
+         max-height: 80px;
+         margin-bottom: 2rem;         
       }
       
 
       h1.heading {            
          text-align: left;            
-         font: 700 3.5rem/4rem Ubuntu,sans-serif;
-         text-transform: uppercase;
+         font: 700 2.5rem/2.5rem 'Cerebri Sans Pro SemiBold',sans-serif;
+         // text-transform: uppercase;
+
+         .phoneticAlphabet{
+            font: 700 0.8rem/0.8rem 'Cerebri Sans Pro',sans-serif;
+         }
       }
 
       h3.heading {
          color: black;
          text-align: left;
-         font: 700 1rem/1.5rem Ubuntu,sans-serif;
+         font: 700 0.8rem/0.8rem 'Cerebri Sans Pro',sans-serif;
          text-transform: uppercase;
       }
 
-      p {
-         text-align: left;
-         font-size: 1.2rem;
-         
-         .btn {
-            background-color: transparent;
-            color: black;
-            border: 1px solid black;
-            padding: 10px;
-            font-size: 1.2em;
-               
-            &:hover {
-               color: #ccc;
-               border-color: #ccc;
-            }
+      .heading-paragraphDiv{
+         margin-top: 1.5rem;
+         p.heading-paragraph {
+            font: 300 1rem/1.1rem "Cerebri Sans Pro", sans-serif;
+            text-align: left;
+            padding:0;
          }
+      }
+
+      .adjsuffix{
+         margin-top: -0.8rem;
+         float: left;
+         font: 700 0.8rem/0.8rem 'Cerebri Sans Pro',sans-serif;
       }
    }
 }
 
-@media (min-width: 768px){
+@media (min-width: 986px){
    div.heading_div{
       .mainContainer {
          transform: translate(-50%,-50%)!important;
+         width: 900px;
+         text-align: left;
 
          img#header_brand_img{
-            max-height: 300px;
+            max-height: 135px;
+            margin-bottom: 2rem;
          }
       
          h1.heading {
-            font: 700 4.25rem/4.5rem Ubuntu,sans-serif;
-            text-transform: uppercase;
+            font: 700 5rem/5.5rem 'Cerebri Sans Pro SemiBold',sans-serif;
+            // text-transform: uppercase;
             text-align: left;
+            .phoneticAlphabet{
+               font: 700 1.5rem/1.5rem 'Cerebri Sans Pro',sans-serif;
+            }
          }
 
          h3.heading {
             text-align: left;
-            font: 700 1.5rem/2rem Ubuntu,sans-serif;
+            font: 700 2rem/2rem Ubuntu,sans-serif;
          }
 
-         p.heading-paragraph {
-            font-size: 2rem;
-            text-align: left;
-            padding:0;
+         .heading-paragraphDiv{
+            margin-top:2rem;
+
+            p.heading-paragraph {
+               font: 300 1.4rem/1.4rem "Cerebri Sans Pro", sans-serif;
+            }
+         }
+
+         .adjsuffix{
+            margin-top: -0.8rem;
+            float: left;
+            font: 700 1.6rem/1.6rem 'Cerebri Sans Pro',sans-serif;
          }
       }
    }

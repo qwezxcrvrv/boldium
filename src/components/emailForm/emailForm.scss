@@ -9,6 +9,10 @@ div.emailForm{
         font-family: 'Bebas Neue', cursive;
     }
 
+    .paragraph{
+        text-align: left;
+    }
+
     .submitBtn {
         background: #2b2d2f;
         border: none;
@@ -21,5 +25,19 @@ div.emailForm{
         right: 0;
         text-align: center;
         width: 200px;
+    }
+}
+
+div.confirmModal{
+    font: 700 1.4rem "Cerebri Sans Pro", sans-serif;
+    div.modalHeader{
+        border-bottom: none;
+    }
+    p{
+        font: 700 1.1rem/1.8rem "Cerebri Sans Pro", sans-serif; 
+    }
+    button.modalClose{
+        font: 300 1rem "Cerebri Sans Pro", sans-serif;
+        padding:0.5rem;
     }
 }

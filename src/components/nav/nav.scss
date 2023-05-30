@@ -60,12 +60,10 @@
  .navbar.solid {
     visibility: visible;
     opacity: 1;
-    background-color: black;
     transition: background-color 0.5s ease 0s;
-    box-shadow: 0 0 4px grey;
+    color: black;
  
-     .navbar-brand {
-       color: white;
+     .navbar-brand {       
        transition: color 1s ease 0s;
 
        img.nav_brand_image{
@@ -79,6 +77,24 @@
           transition: color 1s ease 0s;
         }
      } //end .navbar-nav
+
+    .nav_contactUs{
+      border: solid black 2px;
+      border-radius: 4px;
+      color: black;
+      font: 700 1.2rem "Cerebri Sans Pro", sans-serif;
+      padding:8px;
+      margin-top:0.5rem;
+      margin-right: 0.5rem;
+      background-color: white;
+    }
+
+    @media (max-width: 891px){
+      .nav_contactUs{
+        font: 700 0.9rem "Cerebri Sans Pro", sans-serif;
+        padding:6px;        
+      }
+    }
 
      //Collapsed styles
    .navbar-toggler {

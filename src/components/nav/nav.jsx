@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './nav.scss';
 
@@ -26,7 +27,13 @@ function NavigationBar() {
     return (
         <Navbar expand="lg" fixed='top' className={solid}>
             <Container>
-                <Navbar.Brand href="/home"><img className='nav_brand_image' alt="boldium logo"/></Navbar.Brand>
+                {/* <Navbar.Brand href="/home">
+                    <img className='nav_brand_image' alt="boldium logo"/>
+                </Navbar.Brand> */}
+                <Nav className="ms-auto">
+                    <Nav.Link className="nav_contactUs" href="#contactUs">Contact</Nav.Link>
+                </Nav>
+                
                 {/*
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

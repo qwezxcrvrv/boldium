@@ -1,20 +1,9 @@
 div#testimonials {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
     padding-bottom: 10vmin;
-    padding-top: 10vmin;
-    width: 100vw;
+    padding-top: 20vmin;
+    // width: 100vw;
 
-    div.carousel {
-        margin-bottom: 5vmin;
-        margin-top: 5vmin;
-        min-height: 20rem;
-
-        .carousel-item {
-            margin-left: 10vw;
-            max-width: 80vw;
-        }
-    }
 }
 
 @media (max-width: 768px){

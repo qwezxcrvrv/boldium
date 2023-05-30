@@ -1,151 +1,112 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import './principles.scss';
-import 'animate.css';
 
 function Principles() {
-    const [fadeInLeft, setFadeLeft]   = useState('hidden');
-    const [fadeInRight, setFadeRight] = useState('');
-
-    // Calculate the viewport height
-    const viewportHeight = window.innerHeight;
-
-    // Calculate the threshold at which to add the class
-    const threshold = viewportHeight * 1.2;
-
-    // const fadeInLeftScrollEvent = e => {
-    //     const rects = document.querySelectorAll('.leftFade');
-    //     rects.forEach((v) => {
-    //         const rect = v.getBoundingClientRect();
-    //         const position = rect.top + window.pageYOffset;
-    //         const positionAnimationStart = document.documentElement.scrollTop + threshold || document.body.parentElement.scrollTop + threshold;
-    //         console.log(position+":"+positionAnimationStart)
-    
-    //         if (positionAnimationStart >= position) {
-    //             setFadeLeft('animate__fadeInLeft');
-    //         }
-    //         // else {
-    //         //     setFadeLeft('hidden');
-    //         // }
-    //     });
-
-    // }
-
-    // const fadeInRightScrollEvent = e => {
-    //     const rects = document.querySelectorAll('.rightFade');
-    //     rects.forEach((v) => {
-    //         const rect = v.getBoundingClientRect();
-    //         const position = rect.top + window.pageYOffset;
-    
-    //         if (position <= threshold) {
-    //             setFadeLeft('animate__fadeInRight');
-    //         } else {
-    //             setFadeLeft('');
-    //         }
-    //     });
-    // }
-
-    useEffect(() => {
-        // window.addEventListener('scroll', fadeInLeftScrollEvent);
-        // window.addEventListener('scroll', fadeInRightScrollEvent)
-    });
 
     return (
-        <section id="principles" className="flex-shrink-0" style={{backgroundColor: 'rgb(51, 51, 51)'}}>
-            <div className="container mx-auto py-12 lg:py-14 xl:py-20">
-            <h2 className="text-h3 lg:text-h1 font-medium lg:mb-10 text-center" style={{color: 'rgb(255, 255, 255)', marginBottom: '3rem'}}>Principles</h2>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-10 justify-center">
-                <span className="hidden justify-center justify-end justify-start" />
-                <div className="block-list-item w-full">
-                <div className="flex-shrink-0 relative mb-6 aspect-w-3 aspect-h-2">
-                    <span style={{boxSizing: 'border-box', display: 'block', overflow: 'hidden', width: 'initial', height: 'initial', background: 'none', opacity: 1, border: '0px', margin: '0px', padding: '0px', position: 'absolute', inset: '0px'}}>
-                    <img id="principle_img_smartDesign"alt="Smart design + Function" decoding="async" data-nimg="fill" sizes="100vw" style={{position: 'absolute', inset: '0px', boxSizing: 'border-box', padding: '0px', border: 'none', margin: 'auto', display: 'block', width: '0px', height: '0px', minWidth: '100%', maxWidth: '100%', minHeight: '100%', maxHeight: '100%', objectFit: 'cover', objectPosition: 'center center'}} />
-                    <noscript />
-                    </span>
-                </div>
-                <div className="text-center">
-                    <p className="text-xl lg:text-2xl xl:text-h3 font-medium mb-2" style={{color: 'rgb(255, 255, 255)'}}>
-                        Smart design + Function
-                    </p>
-                    <div className="rich-text-block" style={{color: 'rgb(255, 255, 255)'}}>
-                        A space that not only looks visually appealing, but also meets the needs of its users in an efficient and effective manner.
+    <div className="main_css_container">
+        <div id="homepage">
+            <section data-v-b02e1d2e="" className="Homepage__work">
+                <div data-v-4b5c3e62="" data-v-b02e1d2e="" className="SelectedWork relative w-screen">
+                    <div data-v-4b5c3e62="" aria-hidden="true" className="SelectedWork__bgShim SelectedWork__bgShim--color"></div>
+                    <div data-v-4b5c3e62="" className="SelectedWork__ProjectList w-screen">
+                        <div data-v-4b5c3e62="" className="flex md:grid-default px-4 md:px-0">
+                            <div data-v-4b5c3e62="" className="SelectedProjects row-start-1 col-start-2 col-end-12 pt-20 md:pt-4 pb-16">
+                                <h2 data-v-b02e1d2e="" data-v-4b5c3e62="" className="text-body-700 pb-8">
+                                    Our Values
+                                </h2>
+                                <ul data-v-4b5c3e62="" className="ProjectList">
+                                    <li className="ProjectList__item flex flex-col py-10">
+                                        <div data-v-77bfc8aa="" className="ProjectCard cursor-pointer grid-default w-full">
+                                            <div data-v-77bfc8aa="" className="ProjectCard__left col-start-1 row-start-1 col-end-12 md:col-end-6 flex flex-col justify-center">                                                
+                                                <div data-v-6505c503="" data-v-77bfc8aa="" className="Heading__outer overflow-y-hidden ProjectCard__title mt-2 my-1 md:mb-0 text-titling-50 xs:text-titling-100 md:text-titling-200 uppercase">
+                                                    <h3 data-v-6505c503="" className="Heading z-10  ">
+                                                        <a data-v-b02e1d2e="" href="/case-studies/fusion360" className="whitespace-pre-line" data-v-6505c503="">
+                                                            Quality Design
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <p data-v-77bfc8aa="" className="ProjectCard__eyebrow text-body-500 square-bullet">
+                                                    Smart design + Function
+                                                </p>
+                                        </div>
+                                        <div data-v-77bfc8aa="" className="ProjectCard__right flex flex-col row-start-3 md:row-start-1 col-start-1 md:col-start-7 col-span-12 md:col-span-5">
+                                            <div data-v-4b5c3e62="" data-v-77bfc8aa="" className="h-full flex items-center">
+                                                <p data-v-b02e1d2e="" data-v-77bfc8aa="" className="mt-0 md:mt-8 text-body-400 whitespace-pre-line">
+                                                    A space that not only looks visually appealing, but also meets the needs of its users in an efficient and effective manner.
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="ProjectList__item flex flex-col py-10">
+                                        <div data-v-77bfc8aa="" className="ProjectCard cursor-pointer grid-default w-full">
+                                            <div data-v-77bfc8aa="" className="ProjectCard__left col-start-1 row-start-1 col-end-12 md:col-end-6 flex flex-col justify-center">                                                
+                                                <div data-v-6505c503="" data-v-77bfc8aa="" className="Heading__outer overflow-y-hidden ProjectCard__title mt-2 my-1 md:mb-0 text-titling-50 xs:text-titling-100 md:text-titling-200 uppercase">
+                                                    <h3 data-v-6505c503="" className="Heading z-10  ">
+                                                        <a data-v-b02e1d2e="" href="/case-studies/upwork" className="whitespace-pre-line" data-v-6505c503="">
+                                                            Cost-Effective Design
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <p data-v-77bfc8aa="" className="ProjectCard__eyebrow text-body-500 square-bullet">
+                                                    Buildability + Easy construction solution
+                                                </p>
+                                            </div>
+                                            <div data-v-77bfc8aa="" className="ProjectCard__right flex flex-col row-start-3 md:row-start-1 col-start-1 md:col-start-7 col-span-12 md:col-span-5">
+                                                <div data-v-4b5c3e62="" data-v-77bfc8aa="" className="h-full flex items-center">
+                                                    <p data-v-b02e1d2e="" data-v-77bfc8aa="" className="mt-0 md:mt-8 text-body-400 whitespace-pre-line">
+                                                    Balancing aesthetic appeal and functional requirements while minimizing unnecessary expenses.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="ProjectList__item flex flex-col py-10">
+                                        <div data-v-77bfc8aa="" className="ProjectCard cursor-pointer grid-default w-full">
+                                            <div data-v-77bfc8aa="" className="ProjectCard__left col-start-1 row-start-1 col-end-12 md:col-end-6 flex flex-col justify-center">                                                
+                                                <div data-v-6505c503="" data-v-77bfc8aa="" className="Heading__outer overflow-y-hidden ProjectCard__title mt-2 my-1 md:mb-0 text-titling-50 xs:text-titling-100 md:text-titling-200 uppercase">
+                                                    <h3 data-v-6505c503="" className="Heading z-10  ">
+                                                        <a data-v-b02e1d2e="" href="/case-studies/life-plus" className="whitespace-pre-line" data-v-6505c503="">
+                                                            Responsible Consultation
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <p data-v-77bfc8aa="" className="ProjectCard__eyebrow text-body-500 square-bullet">
+                                                    Honest + Responsible with clients
+                                                </p>
+                                            </div>
+                                            <div data-v-77bfc8aa="" className="ProjectCard__right flex flex-col row-start-3 md:row-start-1 col-start-1 md:col-start-7 col-span-12 md:col-span-5">
+                                                <div data-v-4b5c3e62="" data-v-77bfc8aa="" className="h-full flex items-center">
+                                                    <p data-v-b02e1d2e="" data-v-77bfc8aa="" className="mt-0 md:mt-8 text-body-400 whitespace-pre-line">
+                                                        Honest and transparent with clients throughout the project, taking responsibility for one's actions and decisions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul> 
+                                {/* <a data-v-39e39041="" data-v-b02e1d2e="" href="/work" className="ArrowLink flex pt-8 pb-0 md:pt-20 md:pb-20 space-x-4 w-100" data-v-4b5c3e62="">
+                                    <span data-v-b02e1d2e="" className="Homepage__ctaText text-titling-100 md:text-titling-200 uppercase pr-0 md:pr-4">
+                                        See our work
+                                    </span>
+                                    <div data-v-39e39041="" className="ArrowLink__arrow flex items-center flex-grow">
+                                        <span data-v-39e39041="" className="ArrowLink__line block mr-0 md:mr-4 mr-2"></span>
+                                        <svg data-v-39e39041="" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" className="ArrowLink__icon w-auto">
+                                            <path data-v-39e39041="" d="M8.5 17l-1.4-1.4 6.098-6.1H0v-2h13.2L7.1 1.4 8.5 0 17 8.5 8.5 17z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </a> */}
+                            </div>
+                        </div>
                     </div>
-                    {/* <a className="button primary lg mt-4" target="_self" href="/C:/My%20Web%20Sites/Boldium/boldium..co/index88f0.html#" style={{background: 'rgb(163, 190, 208)', borderRadius: '0px', color: 'rgb(17, 24, 39)', border: '2px solid rgb(163, 190, 208)'}}>More info</a> */}
                 </div>
-                </div>
-                <div className="block-list-item w-full">
-                <div className="flex-shrink-0 relative mb-6 aspect-w-3 aspect-h-2">
-                    <span style={{boxSizing: 'border-box', display: 'block', overflow: 'hidden', width: 'initial', height: 'initial', background: 'none', opacity: 1, border: '0px', margin: '0px', padding: '0px', position: 'absolute', inset: '0px'}}>
-                    <img id="principle_img_CostEffective" alt="Cost-Effective Design" decoding="async" data-nimg="fill" sizes="100vw" style={{position: 'absolute', inset: '0px', boxSizing: 'border-box', padding: '0px', border: 'none', margin: 'auto', display: 'block', width: '0px', height: '0px', minWidth: '100%', maxWidth: '100%', minHeight: '100%', maxHeight: '100%', objectFit: 'cover', objectPosition: 'center center'}} />
-                    <noscript />
-                    </span>
-                </div>
-                <div className="text-center">
-                    <p className="text-xl lg:text-2xl xl:text-h3 font-medium mb-2" style={{color: 'rgb(255, 255, 255)'}}>
-                        Cost-Effective Design
-                    </p>
-                    <div className="rich-text-block" style={{color: 'rgb(255, 255, 255)'}}>
-                        Balancing aesthetic appeal and functional requirements while minimizing unnecessary expenses.
-                    </div>
-                    {/* <a className="button primary lg mt-4" target="_self" href="/C:/My%20Web%20Sites/Boldium/boldium..co/index88f0.html#" style={{background: 'rgb(163, 190, 208)', borderRadius: '0px', color: 'rgb(17, 24, 39)', border: '2px solid rgb(163, 190, 208)'}}>More info</a> */}
-                </div>
-                </div>
-                <div className="block-list-item w-full">
-                <div className="flex-shrink-0 relative mb-6 aspect-w-3 aspect-h-2">
-                    <span style={{boxSizing: 'border-box', display: 'block', overflow: 'hidden', width: 'initial', height: 'initial', background: 'none', opacity: 1, border: '0px', margin: '0px', padding: '0px', position: 'absolute', inset: '0px'}}>
-                    <img id="principle_img_Consultation" alt="Responsible Consultation" decoding="async" data-nimg="fill" sizes="100vw" style={{position: 'absolute', inset: '0px', boxSizing: 'border-box', padding: '0px', border: 'none', margin: 'auto', display: 'block', width: '0px', height: '0px', minWidth: '100%', maxWidth: '100%', minHeight: '100%', maxHeight: '100%', objectFit: 'cover', objectPosition: 'center center'}} />
-                    <noscript />
-                    </span>
-                </div>
-                <div className="text-center">
-                    <p className="text-xl lg:text-2xl xl:text-h3 font-medium mb-2" style={{color: 'rgb(255, 255, 255)'}}>
-                        Responsible Consultation
-                    </p>
-                    <div className="rich-text-block" style={{color: 'rgb(255, 255, 255)'}}>
-                        Honest and transparent with clients throughout the project, taking responsibility for one's actions and decisions.
-                    </div>
-                    {/* <a className="button primary lg mt-4" target="_self" href="/C:/My%20Web%20Sites/Boldium/boldium..co/index88f0.html#" style={{background: 'rgb(163, 190, 208)', borderRadius: '0px', color: 'rgb(17, 24, 39)', border: '2px solid rgb(163, 190, 208)'}}>More info</a> */}
-                </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-
-    
-    
-    // <div className="principles_container pt_lg pb_lg">
-    //     <Container>
-    //         <Row>
-    //             <h2>Our Top 3 Business Principles</h2>
-    //         </Row>
-    //         <div className="mt_md mb_md">
-    //             <Row className='mt_md mb_md'>
-    //                 <div className={[fadeInLeft,"principle_div leftFade"].join(' ')}>
-    //                     <span className="principle_span left">Quality Design</span>
-    //                     <br />
-    //                     {/* <span className="principle_span left">Smart design + Function</span> */}
-    //                     <span className="principle_span left">Dedicated to delivering quality design that is both smart and functional.</span>
-    //                 </div>                    
-    //             </Row>
-    //             <Row className='mt_md mb_md'>  
-    //                 <div className={[fadeInRight,"principle_div rightFade"].join(' ')}>
-    //                     <span className="principle_span right">Cost-Effective Design </span>
-    //                     <br />
-    //                     <span className="principle_span right">Buildability + Easy construction solution</span>
-    //                 </div> 
-    //             </Row>
-    //             <Row className='mt_md mb_md'>
-    //                 <div className={[fadeInLeft,"principle_div leftFade"].join(' ')}>
-    //                     <span className="principle_span left">Responsible Consultation</span>
-    //                     <br />
-    //                     <span className="principle_span left">Honest + Responsible with clients</span>
-    //                 </div> 
-    //             </Row>
-    //         </div>
-    //     </Container>
-    // </div>
+            </section>
+        </div>
+    </div>
     );
-  }
-  
-  export default Principles;
+}
+
+export default Principles;
