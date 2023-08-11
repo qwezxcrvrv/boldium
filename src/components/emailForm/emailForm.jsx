@@ -1,27 +1,44 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Button, Col, Container, Form, FormControl, FormGroup, Row, Modal  } from 'react-bootstrap';
+import { Button, Col, Container, Form, FormControl, FormGroup, Row, Spinner  } from 'react-bootstrap';
 import './emailForm.scss';
 import ConfirmModal from './confirmModal';
 
+function loadingCircle(){
+    return (
+        <div class="wrapper">
+            <div class="loader">
+                <svg class="loading-animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path class="loading-animation__path" d="M17.9 91.1V8.9h33.5s28.8-1.4 28.8 24.7c0 19.6-17.5 23.2-17.5 23.2L85 91.2H69.8l-21-33h-8.1V47.1h9.6s16.1 1.6 16.1-13.5-16.1-13.4-16.1-13.4H31.1v70.9H17.9z"/>
+                </svg>
+            </div>
+        </div>
+    );
+}
+
 function EmailForm() {
     const [modalShow, setModalShow] = useState(false);
+    const [spinnerShow, setSpinnerShow] = useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setModalShow(true)  
-        
+        setSpinnerShow(true)
+        document.getElementById("emailSubmitButton").setAttribute('disabled', '');
 
-        // emailjs.sendForm('service_8p5cvbo', 'template_lf6iplm', form.current, '3ByhoO5Zn5_GC5llA')
-        // .then((result) => {
-        //     console.log(result.text);
-        //     document.getElementById("emailForm").reset();
-        //     setModalShow(true)            
-        // }, (error) => {
-        //     alert("Error occurred.")
-        //     console.log(error.text);
-        // });
+        emailjs.sendForm('service_8p5cvbo', 'template_lf6iplm', form.current, '3ByhoO5Zn5_GC5llA')
+        .then((result) => {
+            console.log(result.text);
+            document.getElementById("emailForm").reset();
+            setSpinnerShow(false)
+            document.getElementById("emailSubmitButton").removeAttribute('disabled');
+            setModalShow(true)            
+        }, (error) => {
+            setSpinnerShow(false)
+            document.getElementById("emailSubmitButton").removeAttribute('disabled');
+            alert("Error occurred.")
+            console.log(error.text);
+        });
     };
 
     return (
@@ -62,7 +79,19 @@ function EmailForm() {
                         </Col>                  
                     </Row>
                     <Row className="justify-content-md-center">
-                        <Button className="submitBtn" type="submit">Submit</Button>                
+                        <Button id="emailSubmitButton" className="submitBtn" type="submit">
+                            {spinnerShow ? 
+                                <Spinner
+                                    id="loadingSpinner"
+                                    as="span"
+                                    animation="border"                            
+                                    role="status"
+                                    aria-hidden="true"
+                                    display="none"
+                                /> :
+                                <span>Submit</span> 
+                            }
+                        </Button>                
                     </Row>
                 </Form>
             </Container>
