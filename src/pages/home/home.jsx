@@ -70,7 +70,7 @@ function Home() {
           columns={2}
           gap="1.5rem"
         /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         <GoogleReviews />
         <ContactUs />
       </div>

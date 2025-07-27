@@ -1,5 +1,11 @@
 /* --- Google Reviews Styling (SASS) --- */
+div#googleReviews {
+    background-color: #fff;
+    // padding-bottom: 10vmin;
+    padding-top: 20vmin;
+}
 
+/* --- Google Reviews Styling (SASS) --- */
 /* Variables */
 $primary-font: sans-serif;
 $border-color: #e0e0e0;
@@ -7,13 +13,6 @@ $card-bg: #ffffff;
 $text-color: #333;
 $subtle-text-color: #757575;
 $star-color: #FFC107; // Google's gold
-
-div#googleReviews {
-    background-color: #fff;
-    // padding-bottom: 10vmin;
-    // padding-top: 20vmin;
-}
-
 /* Main container using CSS Grid */
 .google-reviews-container {
   display: grid;
@@ -22,7 +21,6 @@ div#googleReviews {
   font-family: $primary-font;
   margin-top: 20px;
 }
-
 /* Individual review card styling */
 .review-card {
   border: 1px solid $border-color;
@@ -32,29 +30,24 @@ div#googleReviews {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-
   .review-header {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-
     .reviewer-photo {
       width: 50px;
       height: 50px;
       border-radius: 50%;
       margin-right: 15px;
     }
-
     .reviewer-info {
       display: flex;
       flex-direction: column;
-
       .reviewer-name {
         font-weight: bold;
         margin: 0;
         font-size: 1.1em;
       }
-
       .stars {
         font-size: 1.2em;
         .star.filled {
@@ -66,7 +59,6 @@ div#googleReviews {
       }
     }
   }
-
   .review-text {
     flex-grow: 1; /* Ensures card heights are consistent in a flex layout */
     font-size: 1em;
@@ -74,10 +66,37 @@ div#googleReviews {
     color: $text-color;
     margin-bottom: 15px;
   }
-
   .review-time {
     font-size: 0.85em;
     color: $subtle-text-color;
     text-align: right;
+  }
+}
+
+/* * --- MOBILE CAROUSEL STYLES --- 
+* This @media query activates only on screens 768px or smaller.
+*/
+@media (max-width: 768px) {
+  .google-reviews-container {
+    display: flex; // Change from grid to flex
+    overflow-x: auto; // Allow horizontal scrolling
+    scroll-snap-type: x mandatory; // Enable snapping behavior
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+    
+    // Add some padding so the cards don't touch the edge
+    // And to make space for the scrollbar
+    padding: 10px 10px 20px 10px; 
+    
+    // Hide the scrollbar for a cleaner look
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  .review-card {
+    flex: 0 0 90%; // Each card takes up 90% of the container width
+    scroll-snap-align: start; // Snap to the start of each card
   }
 }
