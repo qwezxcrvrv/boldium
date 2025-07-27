@@ -1,5 +1,6 @@
 import React from "react";
 import './testimonials.scss';
+// import GoogleReviews from '../googleReview/googleReview.jsx';
 
 function Testimonials() {
 

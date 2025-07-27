@@ -1,0 +1,142 @@
+// Variables
+$modal-z-index: 1000;
+$overlay-bg: rgba(0, 0, 0, 0.75);
+$content-bg: #fff;
+$nav-btn-bg: rgba(0, 0, 0, 0.4);
+$nav-btn-color: #fff;
+$nav-btn-hover-bg: rgba(0, 0, 0, 0.7);
+$close-btn-color: #555;
+$close-btn-hover-color: #000;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $overlay-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $modal-z-index;
+  padding: 1rem; // Allow some space around the modal content  
+  cursor: pointer; // Indicate clicking overlay closes modal
+}
+
+.modal-content {
+  background-color: $content-bg;
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative; // For positioning close button
+  max-width: 60vw; // Max width relative to viewport
+  max-height: 60vh; // Max height relative to viewport
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; // Prevent content spill
+  cursor: default; // Reset cursor for content area
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: $close-btn-color;
+  cursor: pointer;
+  padding: 0.25rem;
+  z-index: $modal-z-index+1;
+
+  &:hover {
+    color: $close-btn-hover-color;
+  }
+}
+
+.modal-image-container {
+  position: relative; // For positioning nav buttons within
+  display: flex;      // Allows image to dictate container size somewhat
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;      // Take up available space
+  min-height: 200px; // Ensure some minimum height
+}
+
+.modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(85vh - 6rem); // Adjust based on padding and info height
+  object-fit: contain; // Show the whole image, letterboxed if needed
+  user-select: none; // Prevent image selection
+}
+
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $nav-btn-bg;
+  color: $nav-btn-color;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: $modal-z-index + 1; // Ensure they are above the image if overlapping
+
+  &:hover {
+    background-color: $nav-btn-hover-bg;
+  }
+
+  &.modal-prev-btn {
+    left: 10px; // Position left button
+  }
+
+  &.modal-next-btn {
+    right: 10px; // Position right button
+  }
+}
+
+.modal-info {
+  margin-top: 1rem;
+  text-align: center;
+  color: #333;
+  min-height: 2.5em; // Reserve space even if title/counter aren't shown initially
+
+  .modal-title {
+     margin: 0 0 0.25rem 0;
+     font-size: 1.1rem;
+     font-weight: 600;
+  }
+
+  .modal-counter {
+     font-size: 0.9rem;
+     color: #666;
+  }
+}
+
+// Optional: Add transitions for modal appearing/disappearing
+.modal-overlay {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay[style*="display: flex"] { // Approximation for when it's 'open'
+  opacity: 1;
+}
+
+.modal-content {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay[style*="display: flex"] .modal-content { // Approximation
+  transform: scale(1);
+}

@@ -1,12 +1,15 @@
 div#testimonials {
     background-color: #fff;
-    padding-bottom: 10vmin;
+    // padding-bottom: 10vmin;
     padding-top: 20vmin;
     // width: 100vw;
 
 }
 
 @media (max-width: 768px){
+    #testimonials div .header {
+        margin-bottom: -2rem !important;
+    }
     div.carousel-indicators {
         margin-bottom: -1rem;
     }

@@ -1,10 +1,39 @@
+import React from 'react';
 import './home.scss';
 import ContactUs from '../../components/contactus/contactus';
 import Testimonials from '../../components/testimonials/testimonials';
 import Principles from '../../components/principles/principles';
+import Projects from '../../components/projects/projects';
+import GoogleReviews from '../../components/googleReview/googleReview.jsx';
 // Done -> 투명배경에 contact 박스 -> 검정 border에 검정글씨 
 // 이메일 보내고 나서 확인 메세지. 양쪽으로 나눈뒤 왼쪽에 추가 정보넣기
 // favicon -> BA -> Cerebri 폰트로 
+
+const architectureProjects = [
+  {
+    id: 'proj-001',
+    primaryImageUrl: '/images/Gallery/project1-main.jpg', // Image shown in the grid
+    primaryImageAlt: 'Exterior view of modern residential house',
+    images: [ // All images for the modal
+      { imageUrl: '/images/Gallery/project1-main.jpg', altText: 'Exterior view of modern residential house' },
+      { imageUrl: '/images/Gallery/project1-map.jpg', altText: 'Living room of Lakeside Residence' }
+    ],
+    title: 'Lakeside Residence',
+    description: 'A stunning home blending modernism with nature.',
+  },
+  {
+    id: 'proj-002',
+    primaryImageUrl: '/images/Gallery/project2-main.jpg',
+    primaryImageAlt: 'Interior of a minimalist office building lobby',
+    images: [
+      { imageUrl: '/images/Gallery/project2-main.jpg', altText: 'Interior of a minimalist office building lobby' },
+      { imageUrl: '/images/Gallery/project2-map.jpg', altText: 'Exterior of City Center Tower' },
+      { imageUrl: '/images/Gallery/project2-after.jpg', altText: 'Atrium of City Center Tower' },
+    ],
+    title: 'City Center Tower',
+    // description: '...'
+  }
+];
 function Home() {
     return (
       <div className="home">
@@ -36,7 +65,13 @@ function Home() {
           </div>
         </div>
         <Principles />
+        {/* <Projects 
+          projects={architectureProjects.slice(0,2)} // Use remaining projects
+          columns={2}
+          gap="1.5rem"
+        /> */}
         <Testimonials />
+        <GoogleReviews />
         <ContactUs />
       </div>
     );

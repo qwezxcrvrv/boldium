@@ -1,0 +1,118 @@
+// Variables for easy customization
+$gallery-item-hover-scale: 1.03;
+$gallery-item-transition-speed: 0.3s;
+$overlay-background: rgba(0, 0, 0, 0);
+$overlay-text-color: #ffffff;
+
+.block-container{
+    display: block;
+}
+
+.gallery-container {
+  //width: 50%; // Ensure it takes up available width
+  padding: 1rem 0; // Add some padding top/bottom if needed
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15rem;
+}
+
+.gallery-item {
+  position: relative; // Needed for absolute positioning of the overlay
+  overflow: hidden; // Hide parts of the image that might overflow on hover/scale
+  border-radius: 4px; // Optional: slightly rounded corners
+  aspect-ratio: 1 / 1; // Makes items square by default. Adjust if needed (e.g., 4 / 3) or remove for variable height.
+                       // Alternatively, set a fixed height for rows in the gridStyle if preferred.
+
+  img {
+    display: block; // Removes extra space below the image
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensures the image covers the item area, cropping if necessary
+    filter: grayscale(100%); // Make it black and white by default
+    transition:
+        filter $gallery-item-transition-speed ease-in-out,
+        transform $gallery-item-transition-speed ease-in-out; // Add filter to transition
+    
+  }
+
+  // --- Optional Overlay ---
+  .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay-background;
+    color: $overlay-text-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0; // Hidden by default
+    transition: opacity $gallery-item-transition-speed ease-in-out;
+    text-align: center;
+
+    .gallery-item-title {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem; // Adjust as needed
+    }
+
+    .gallery-item-description {
+      margin: 0;
+      font-size: 0.9rem; // Adjust as needed
+    }
+  }
+
+  // --- Hover Effects ---
+  &:hover {
+    img {
+      transform: scale($gallery-item-hover-scale); // Slight zoom on hover
+      filter: grayscale(0%); // Restore color on hover
+    }
+
+    .gallery-item-overlay {
+      opacity: 1; // Show overlay on hover
+    }
+  }
+}
+
+// --- Responsive Adjustments (Example) ---
+@media (max-width: 768px) {
+  // On medium screens, maybe 2 columns
+  // Note: You'd need to pass the column count down dynamically
+  //       or handle this directly in the component's style logic
+  //       if you want the JS to control responsiveness.
+  //       This SCSS approach assumes the number of columns passed
+  //       via props might be fixed, and SCSS handles visual breaks.
+  // Alternatively, adjust the `columns` prop based on screen size in the parent component.
+
+  // If using JS to control columns based on screen size, you might not need this media query for grid-template-columns.
+}
+
+@media (max-width: 480px) {
+   // On small screens, maybe 1 column
+  // .gallery-container {
+  //   grid-template-columns: 1fr; // Example if overriding JS style prop isn't desired
+  // }
+   .gallery-item {
+     aspect-ratio: 16 / 9; // Adjust aspect ratio for smaller screens if needed
+   }
+}
+
+
+div#projects {
+    background-color: #fff;
+    //padding-bottom: 10vmin;
+    padding-top: 20vmin;
+    // width: 100vw;
+
+}
+
+@media (max-width: 768px){
+    div.carousel-indicators {
+        margin-bottom: -1rem;
+    }
+}
+
